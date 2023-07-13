@@ -5,7 +5,6 @@ import { useAppSelector } from "../../hooks/useAppSelector";
 
 const Admin = () => {
   const dispatch = useAppDispatch();
-  const {todo} = useAppSelector(s => s.todoSlice)
   const [name, setName] = useState("")
   const [image, setImage] = useState<any>("")
   const [price, setPrice] = useState("")
@@ -53,15 +52,7 @@ const Admin = () => {
           </div>
         </form>
         <div>
-        {
-            todo.map(el => (
-                <div>
-                    <img src={el.image} alt="img" />
-                    <h1>{el.name}</h1>
-                    <h1>{el.price}</h1>
-                </div>
-            ))
-        }
+       
         </div>
       </div>
     </div>

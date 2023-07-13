@@ -4,7 +4,7 @@ import logo from "../../images/image 2.png";
 
 const Header = () => {
   return (
-    <div className="shadow-md">
+    <div className="  shadow-md">
       <div className="container flex items-center justify-between">
             <img src={logo} alt="img" />
             <div className="flex items-center justify-between">

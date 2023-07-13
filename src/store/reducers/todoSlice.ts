@@ -1,10 +1,13 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit"
 
+const todo: any = localStorage.getItem("task")
+
+
 interface ITodoState {
     todo: any[]
 }
 const initialState: ITodoState = {
-    todo: []
+    todo: JSON.parse(todo) || []
 }
 
 export const todoSlice = createSlice({
@@ -12,7 +15,7 @@ export const todoSlice = createSlice({
     initialState,
     reducers : {
         addTodo(state, action: PayloadAction<any>){
-            state.todo = [{...action.payload}, ...state.todo]
+           localStorage.setItem("task", JSON.stringify( state.todo = [{...action.payload}, ...state.todo]))
         }
     }
 })

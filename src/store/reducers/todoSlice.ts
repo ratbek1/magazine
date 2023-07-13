@@ -13,7 +13,7 @@ const initialState: ITodoState = {
 export const todoSlice = createSlice({
     name: "todo",
     initialState,
-    reducers : {
+    reducers:{
         addTodo(state, action: PayloadAction<any>){
            localStorage.setItem("task", JSON.stringify( state.todo = [{...action.payload}, ...state.todo]))
         }

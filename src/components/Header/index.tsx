@@ -5,7 +5,7 @@ import logo from "../../images/image 2.png"
 const Header = () => {
     return (
         <div>
-            <img src={logo} alt="" />
+            <img src={logo} alt="img" />
             <div className="flex items-center justify-between">
                 <Link to={"/admin"}>Admin</Link>
                 <Link to={"/orders"}>Orders</Link>
